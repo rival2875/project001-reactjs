@@ -108,6 +108,7 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
+  cursor: pointer;
 }
 
 .auth-panel__subtitle {
@@ -134,6 +135,12 @@
   font-size: 11px;
   font-weight: 700;
   line-height: 1.2;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.form-field:focus-within .form-field__label {
+  color: #2860df;
 }
 
 .text-input {
@@ -148,15 +155,17 @@
   color: #262a33;
   font: inherit;
   font-size: 10px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
 }
 
 .text-input::placeholder {
   color: #b6b8bf;
 }
 
+.text-input:focus,
 .text-input:focus-visible {
-  border-color: #2e5ebc;
-  box-shadow: 0 0 0 2px rgb(46 94 188 / 14%);
+  border-color: #2860df;
+  box-shadow: 0 0 0 3px rgb(40 96 223 / 22%);
 }
 
 .primary-button {
@@ -186,4 +195,22 @@
   color: #656a75;
   font-size: 11px;
   line-height: 1.4;
+}
+
+.auth-panel__footer {
+  margin: 14px 0 0;
+  color: #242832;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.auth-panel__link {
+  color: #2860df;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-panel__link:hover {
+  text-decoration: underline;
 }
